@@ -4,9 +4,9 @@ from sympy import resultant
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
-url = 'http://192.168.31.93:8080/video'
+url = 'http://192.168.31.93:8080/video'  # used mobile cam by ip webcam app
 
-cap = cv2.VideoCapture(url)
+cap = cv2.VideoCapture(url) # replace url by 0 if using laptop cam
 
 while cap.isOpened():
     ret, frame = cap.read()
